@@ -1,0 +1,8 @@
+---
+layout: 'default'
+---
+
+<article>
+	<h2><%= @document.title %></h2>
+	<%- @content %>
+</article>

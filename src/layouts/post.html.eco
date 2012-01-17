@@ -1,0 +1,24 @@
+---
+layout: 'default'
+---
+
+<article>
+	<h2><%= @document.title %></h2>
+	<p class="when"><%= @document.date.toShortDateString() %></p>
+	<%- @content %>
+</article>
+
+<footer>
+	<% if @document.relatedDocuments.length: %>
+	<section class="related">
+		<h3>Related Posts</h3>
+		<ul>
+			<% for document in @document.relatedDocuments: %>
+				<li><span><%= document.date.toShortDateString() %></span>
+				&raquo;
+				<a href="<%= document.url %>"><%= document.title %></a></li>
+			<% end %>
+		</ul>
+	</section>
+	<% end %>
+</footer>

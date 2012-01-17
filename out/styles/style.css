@@ -1,0 +1,4 @@
+@import '../styles/base.css';
+@import '../styles/skeleton.css';
+#header{padding:20px 0;}
+#header h1{cursor:pointer}
